@@ -1,4 +1,4 @@
-package compareasia.research.monads;
+package lessons.research.monads;
 
 /**
  * Hello world!

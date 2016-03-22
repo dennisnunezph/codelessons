@@ -1,4 +1,4 @@
-package com.lessons.strings;
+package lessons.strings;
 
 /**
  * Created by dennis on 3/22/16.

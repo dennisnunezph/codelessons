@@ -1,4 +1,4 @@
-package compareasia.research.bulkdata;
+package lessons.research.bulkdata;
 
 import com.compareasia.research.monads.Person;
 

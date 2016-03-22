@@ -1,4 +1,4 @@
-package compareasia.threads;
+package lessons.threads;
 
 /**
  * Created by dennis on 2/10/16.

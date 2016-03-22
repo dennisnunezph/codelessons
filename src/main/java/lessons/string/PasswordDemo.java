@@ -1,4 +1,4 @@
-package compareasia.string;
+package lessons.string;
 
 /**
  * Created by dennis on 3/17/16.

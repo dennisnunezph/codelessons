@@ -1,4 +1,4 @@
-package compareasia.research.monads;
+package lessons.research.monads;
 
 /**
  * Created by dennis on 7/30/15.

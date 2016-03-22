@@ -1,4 +1,4 @@
-package compareasia.string;
+package lessons.string;
 
 public class Test
 {

@@ -1,4 +1,4 @@
-package compareasia.threads.wait;
+package lessons.threads.wait;
 
 /**
  * Created by dennis on 3/17/16.

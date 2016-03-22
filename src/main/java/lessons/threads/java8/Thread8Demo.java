@@ -1,4 +1,4 @@
-package compareasia.threads.java8;
+package lessons.threads.java8;
 
 /**
  * Created by dennis on 2/11/16.

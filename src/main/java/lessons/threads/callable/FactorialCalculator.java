@@ -1,4 +1,4 @@
-package compareasia.threads.callable;
+package lessons.threads.callable;
 
 import java.util.concurrent.Callable;
 
