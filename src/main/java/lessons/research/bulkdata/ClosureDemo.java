@@ -1,6 +1,7 @@
 package lessons.research.bulkdata;
 
-import com.compareasia.research.monads.Person;
+
+import lessons.research.monads.Person;
 
 import java.util.ArrayList;
 import java.util.HashMap;
