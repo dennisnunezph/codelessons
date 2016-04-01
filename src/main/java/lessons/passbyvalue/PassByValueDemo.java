@@ -31,5 +31,6 @@ public class PassByValueDemo {
         tricky(pnt1,pnt2);
         System.out.println("X: " + pnt1.x + " Y:" + pnt1.y);
         System.out.println("X: " + pnt2.x + " Y: " +pnt2.y);
+
     }
 }
