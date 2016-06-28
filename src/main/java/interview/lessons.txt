@@ -3,35 +3,45 @@ Abstraction;
 Access Modifier
 ArrayList
 Behavioural Design Pattern
+BigO notation;O(N) -single iteration, O(N ^ 2) -double iteration, O(2N) double growth per additional input.O(log N) - logarithms binary search  
 Builder Pattern;a creational design patter used to build an object with a lot of optional parameters
 char;
 classloader;primordial, extn libraries, classpath
 concurrency
 Comparator;compare(Object obj1, Object obj2)
 CompareTo;a method that needs to be implemented in Comparable
+Connection Pooling;Commons DBCP vs c3PO
+Coupling;measure of how much a class is dependent on another class
 data types;be careful, bears shouldn't ingest large fluffy dogs - boolean, char,byte, short, int, long,float,double
-Deadlock
+Defensive Copy
+Deadlock;when a thread cannot obtain a lock of an object since other thread has been using it or execution is inside synchronized state
+Deep Copy vs Shallow Copy
 Design Patters;Creational, Behavioral and Structural
 Difference between ArrayList and LinkedList;ArrayList-random access Linked List-walk through each nodes
 Difference between and Stack and a Queue; Stack-FILO Queue - FIFO
 DOM vs SAX
 Equals - must override hasCode too
 Encapsulation;information hiding via getters and setters
-Enum
+Enum;
+Error;OutOfMemoryError
 Exception
-final vs finally
+final vs finally; final-variable declaration for immutability.cannot be subclassess finally - guaranteed execution in block in try catch.  finalize - cleanup method before garbase collection 
 float
-Flyweight pattern
+Flyweight pattern;structural-decrease object count
 Foreign Key
-Generics
+Generics;provides compile-time safety for methods which accepts subtypes
 HashMap-implementation of Map
 Heap;where objects in Java are created
 Hibernate
+How do you count the elements in a linked list; private int countRec()
+Http Get;1024 limit
+Immutable Class;final Class, final private variables, no setter, defensive copies of Dates,List
 Index
 Inner Classes
 Inner Join vs Outer Join
 int
 interface
+Iterator;public Iterator<String> iterator() { return new LinkedListIterator(); }\n private class LinkedListIterator implements Iterator<String> {
 Is float amt = 10.3 corrrect?;No. float amt = 10.3f;
 java collections
 JPA;specification for accessing, persisting and managing data between entity and relational database tables
@@ -42,28 +52,33 @@ MVC;Model View Controller
 OOP;Abstraction, Encapsulation, Inheritance, Polymorphism
 Pass by Value or Pass by Reference;Java is Pass by Value
 PECS;Producer Extends Consumer Super
-PermGen
+PermGen;Permanent Generation-objects which survided Young Gen, Tenured Gen. Where java classes are stored
 Polymorphism;Allows the supertypes and its subtype to be accepted in a method without changing the code
+Race Condition;shared data is modified by multiple threads
 REST;GET PUT DELETE
+Runtime Exception;NPE, ArithmeticException,IllegalArgumentException, NoSuchMethodException, IndexOutOfBoundsException
 Primary Key - only one in each table
 Servlet;java class which allows servers to communicate with clients by means of request response model
-Session Tracking
+Session Tracking;User Login, URL Rewriting, Hidden Forms, Cookies and Sessions
 Session Replication;only for session.setAttributes
 Set
 Singleton;lazy instantations and ensure only one instance is created
-SOAP
+SOAP;Simple Object Access Protocol. A data interchange format
 SOLID;Single Responsibility Principle\n Open For Modification close for extension \n Liskov Substitution Principle \n Interface Segregation \n Dependency Inversion Principle
 Sorting;
 spring framework
 Stack;where objects in parameters and inside parameters live
 static classes
 static initializers
-SQL Aggregates;AVG, SUM,
-Thread State
-Throwable
-Time
-Url Rewriting
+Sticky Session;user is tied to a specific server
+SQL Aggregates;AVG, SUM, MIN, MAXa
+Thread Contention;one thread is waiting for a lock/object that is currently being held by another thread
+Thread State; New, Runnable, Blocked, Waiting, Timed_Waiting, Terminating
+Throwable;super class of all errors and exception. Only subclasses of throwable can be used in throws. throwable(exception,error)
+Time;DateTime, JodaDateTime
+Url Rewriting;adding extra information to a URL
 Unit Testing
 Volatile
 Weak Reference
 Why is notify, notifyAll part of an Object;Locks are per Object so only the Object can invoke Notify and NotifyAll
+WSDL-port, service,

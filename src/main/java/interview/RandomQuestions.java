@@ -39,7 +39,7 @@ public class RandomQuestions {
 
                 int index = (int) (Math.random() * questions.size());
 
-                qandA = questions.get(index);
+                qandA = index > questions.size() -1 ? questions.get(index - 1) : questions.get(index);
                 question = qandA;
                 if (qandA.contains(";")) {
                     qaParts = qandA.split(";");
