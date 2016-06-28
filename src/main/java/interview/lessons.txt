@@ -1,0 +1,69 @@
+abstract;base class whose methods defined as abstract needs to be implemented or redefined as abstract
+Abstraction;
+Access Modifier
+ArrayList
+Behavioural Design Pattern
+Builder Pattern;a creational design patter used to build an object with a lot of optional parameters
+char;
+classloader;primordial, extn libraries, classpath
+concurrency
+Comparator;compare(Object obj1, Object obj2)
+CompareTo;a method that needs to be implemented in Comparable
+data types;be careful, bears shouldn't ingest large fluffy dogs - boolean, char,byte, short, int, long,float,double
+Deadlock
+Design Patters;Creational, Behavioral and Structural
+Difference between ArrayList and LinkedList;ArrayList-random access Linked List-walk through each nodes
+Difference between and Stack and a Queue; Stack-FILO Queue - FIFO
+DOM vs SAX
+Equals - must override hasCode too
+Encapsulation;information hiding via getters and setters
+Enum
+Exception
+final vs finally
+float
+Flyweight pattern
+Foreign Key
+Generics
+HashMap-implementation of Map
+Heap;where objects in Java are created
+Hibernate
+Index
+Inner Classes
+Inner Join vs Outer Join
+int
+interface
+Is float amt = 10.3 corrrect?;No. float amt = 10.3f;
+java collections
+JPA;specification for accessing, persisting and managing data between entity and relational database tables
+Lazy Loading;design pattern in java where initialization are deferred until the point at which it is needed.
+LinkedList-how do you count the elements?
+MVC;Model View Controller
+
+OOP;Abstraction, Encapsulation, Inheritance, Polymorphism
+Pass by Value or Pass by Reference;Java is Pass by Value
+PECS;Producer Extends Consumer Super
+PermGen
+Polymorphism;Allows the supertypes and its subtype to be accepted in a method without changing the code
+REST;GET PUT DELETE
+Primary Key - only one in each table
+Servlet;java class which allows servers to communicate with clients by means of request response model
+Session Tracking
+Session Replication;only for session.setAttributes
+Set
+Singleton;lazy instantations and ensure only one instance is created
+SOAP
+SOLID;Single Responsibility Principle\n Open For Modification close for extension \n Liskov Substitution Principle \n Interface Segregation \n Dependency Inversion Principle
+Sorting;
+spring framework
+Stack;where objects in parameters and inside parameters live
+static classes
+static initializers
+SQL Aggregates;AVG, SUM,
+Thread State
+Throwable
+Time
+Url Rewriting
+Unit Testing
+Volatile
+Weak Reference
+Why is notify, notifyAll part of an Object;Locks are per Object so only the Object can invoke Notify and NotifyAll

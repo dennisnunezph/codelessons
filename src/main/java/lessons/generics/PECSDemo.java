@@ -10,7 +10,6 @@ public class PECSDemo {
 
     public static void main(String[] args) {
 
-        /**
         List<? extends Animal> animals;
         animals = new ArrayList<Animal>();
         animals = new ArrayList<SeaAnimal>();
@@ -28,14 +27,17 @@ public class PECSDemo {
         List<SeaAnimal> seaAnimals = new ArrayList<SeaAnimal>();
         produceSomeSeaAnimals(seaAnimals);
 
-        List<SeaAnimal> seaAnimals = new ArrayList<>();
+       // List<SeaAnimal> seaAnimals = new ArrayList<>();
         seaAnimals.add(produceSeaAnimal());
 
         List<SeaAnimal> oldAnimals = new ArrayList<>();
         oldAnimals.add(produceSeaAnimal());
 
         getOldSeaAnimals(seaAnimals, oldAnimals);
-        */
+
+        List<? super SeaAnimal> psaList = produceSomeSeaAnimals();
+        //psaList.stream().forEach(sa -> System.out.println(sa.getAge()));
+        /**
         List<SeaAnimal> input1 = new ArrayList<SeaAnimal>();
         List<Animal> output1 = new ArrayList<Animal>();
         input1.add(new Fish(200));
@@ -50,7 +52,7 @@ public class PECSDemo {
         input2.add(new Fish(150));
         input2.add(new Fish(300));
         getOldSeaAnimals(input2, output2);
-
+        */
     }
 
     public static SeaAnimal produceSeaAnimal()

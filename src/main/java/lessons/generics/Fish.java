@@ -3,7 +3,7 @@ package lessons.generics;
 /**
  * Created by dennis on 3/29/16.
  */
-public class Fish extends SeaAnimal
+public class  Fish extends SeaAnimal
 {
 
     private int mAge;

@@ -7,7 +7,7 @@ public class ExceptionDemo {
 
     public static void main(String[] args) {
          ExceptionDemo ed = new ExceptionDemo();
-         ed.divide(1,2);
+         ed.divide(1,0);
         Boolean flag = true;
     }
 
