@@ -1,18 +1,23 @@
 abstract;base class whose methods defined as abstract needs to be implemented or redefined as abstract
-Abstraction;
-Access Modifier
-ArrayList
+Abstraction;making things simple by focusing on a specific attribute or behaviour
+Access Modifier;private,default(package),protected(package,subclasses),public
+AOP in Spring;Logging, Transaction
+ArrayList;size()
 Behavioural Design Pattern
 BigO notation;O(N) -single iteration, O(N ^ 2) -double iteration, O(2N) double growth per additional input.O(log N) - logarithms binary search  
-Builder Pattern;a creational design patter used to build an object with a lot of optional parameters
+Builder Pattern;a creational design patter used to build an object with a lot of optional parameters. Person person = new Person.Person
 char;
 classloader;primordial, extn libraries, classpath
 concurrency
+Comparable;compareTo(Object obj)
 Comparator;compare(Object obj1, Object obj2)
 CompareTo;a method that needs to be implemented in Comparable
 Connection Pooling;Commons DBCP vs c3PO
+contravariant;<? super T>
 Coupling;measure of how much a class is dependent on another class
-data types;be careful, bears shouldn't ingest large fluffy dogs - boolean, char,byte, short, int, long,float,double
+covariant; <? extends T>
+data types;be careful, bears shouldn't ingest large fluffy dogs
+data types range default;boolean(false), char,byte(8), short(16), int(32), long(64),float(32 IEE 754),double (64 IEE 754)
 Defensive Copy
 Deadlock;when a thread cannot obtain a lock of an object since other thread has been using it or execution is inside synchronized state
 Deep Copy vs Shallow Copy
@@ -25,8 +30,9 @@ Encapsulation;information hiding via getters and setters
 Enum;
 Error;OutOfMemoryError
 Exception
+fail-fast vs fail-safe;fail-fas-HashMap, ArrayList, fail-safe-ConcurrentHashMap
 final vs finally; final-variable declaration for immutability.cannot be subclassess finally - guaranteed execution in block in try catch.  finalize - cleanup method before garbase collection 
-float
+float;32 bit IEEE 754 default-0.0f
 Flyweight pattern;structural-decrease object count
 Foreign Key
 Generics;provides compile-time safety for methods which accepts subtypes
@@ -37,10 +43,11 @@ How do you count the elements in a linked list; private int countRec()
 Http Get;1024 limit
 Immutable Class;final Class, final private variables, no setter, defensive copies of Dates,List
 Index
-Inner Classes
-Inner Join vs Outer Join
+Inner Classes;static member(Outer outer = new Outer(); Outer.Inner outin = outer.new Inner(), member classes, local, anonymous
+Inner Join vs Outer Join; inner join is only a matches b, outer join is all a plus all b and if no match then null
 int
-interface
+interface;collection of abstract methods
+invariant
 Iterator;public Iterator<String> iterator() { return new LinkedListIterator(); }\n private class LinkedListIterator implements Iterator<String> {
 Is float amt = 10.3 corrrect?;No. float amt = 10.3f;
 java collections
@@ -48,7 +55,7 @@ JPA;specification for accessing, persisting and managing data between entity and
 Lazy Loading;design pattern in java where initialization are deferred until the point at which it is needed.
 LinkedList-how do you count the elements?
 MVC;Model View Controller
-
+Method reference;Transaction::getId
 OOP;Abstraction, Encapsulation, Inheritance, Polymorphism
 Pass by Value or Pass by Reference;Java is Pass by Value
 PECS;Producer Extends Consumer Super
@@ -60,25 +67,29 @@ Runtime Exception;NPE, ArithmeticException,IllegalArgumentException, NoSuchMetho
 Primary Key - only one in each table
 Servlet;java class which allows servers to communicate with clients by means of request response model
 Session Tracking;User Login, URL Rewriting, Hidden Forms, Cookies and Sessions
-Session Replication;only for session.setAttributes
-Set
+Session Replication;only for session.setAttributes. copy serialiable session data in every instances
+Set;sorted is TreeSet
 Singleton;lazy instantations and ensure only one instance is created
 SOAP;Simple Object Access Protocol. A data interchange format
 SOLID;Single Responsibility Principle\n Open For Modification close for extension \n Liskov Substitution Principle \n Interface Segregation \n Dependency Inversion Principle
+sleep();blocking 
 Sorting;
-spring framework
+spring framework;MVC,IOC, AOP
 Stack;where objects in parameters and inside parameters live
-static classes
-static initializers
+static variables;class variables
+static initializers;Parent static block, Child static block,Parent initialisation  block,Parent Constructor,Child initialisation block,Child Constructor
 Sticky Session;user is tied to a specific server
 SQL Aggregates;AVG, SUM, MIN, MAXa
+Streams;List<Integer> transactionsIds = transactions.stream().filter(t -> t.getType() == Transaction.GROCERY).sorted(comparing(Transaction::getValue).reversed()).map(Transaction::getId).collect(toList());
 Thread Contention;one thread is waiting for a lock/object that is currently being held by another thread
+ThreadLocale;read/write only by the same thread,private ThreadLocal myThreadLocal = new ThreadLocal() , myThreadLocal.set("A thread local value")
 Thread State; New, Runnable, Blocked, Waiting, Timed_Waiting, Terminating
 Throwable;super class of all errors and exception. Only subclasses of throwable can be used in throws. throwable(exception,error)
 Time;DateTime, JodaDateTime
 Url Rewriting;adding extra information to a URL
 Unit Testing
-Volatile
+Volatile;stored in main memory,expensive,prevents instruction reordering
+wait();non-blocking, used with notify and notify all
 Weak Reference
 Why is notify, notifyAll part of an Object;Locks are per Object so only the Object can invoke Notify and NotifyAll
 WSDL-port, service,

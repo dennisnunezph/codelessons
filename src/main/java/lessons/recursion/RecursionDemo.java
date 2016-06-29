@@ -7,7 +7,7 @@ public class RecursionDemo {
 
     public static void main(String[] args) {
 
-        factorial(5);
+        System.out.println("Factorial is :" + factorial(2));
 
 
     }

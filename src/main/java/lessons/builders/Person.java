@@ -45,14 +45,6 @@ public class Person {
         private final String firstName;
         private final String lastName;
 
-        public String getMiddleName() {
-            return middleName;
-        }
-
-        public void setMiddleName(String middleName) {
-            this.middleName = middleName;
-        }
-
         private String middleName;
 
         public PersonBuilder(final String firstName,

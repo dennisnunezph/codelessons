@@ -44,7 +44,9 @@ public class RandomQuestions {
                 if (qandA.contains(";")) {
                     qaParts = qandA.split(";");
                     question = qaParts[0];
-                    answer = qaParts[1];
+                    if (qaParts.length > 1) {
+                        answer = qaParts[1];
+                    }
                 }
 
                 System.out.println("What is : " + question + " ?");
