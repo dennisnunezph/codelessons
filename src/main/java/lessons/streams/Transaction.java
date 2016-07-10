@@ -1,4 +1,4 @@
-package streams;
+package lessons.streams;
 
 /**
  * Created by dennis on 6/29/16.

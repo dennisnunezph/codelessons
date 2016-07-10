@@ -1,10 +1,15 @@
 abstract;base class whose methods defined as abstract needs to be implemented or redefined as abstract
 Abstraction;making things simple by focusing on a specific attribute or behaviour
 Access Modifier;private,default(package),protected(package,subclasses),public
+ACID;Atomicity, Consistency, Isolation, Durability
+agile;self-organizing,tight feedback-loop, vertical slice
 AOP in Spring;Logging, Transaction
 ArrayList;size()
-Behavioural Design Pattern
+Authentication Mechanism;HTTP-Basic(username/password),Form-Based(username/pwd with forms), SSL/TLS-X509 certificates, HTTP Digest
+Behavioural Design Pattern;Observer, Template,Command, Observer, Iterator, Strategy
 BigO notation;O(N) -single iteration, O(N ^ 2) -double iteration, O(2N) double growth per additional input.O(log N) - logarithms binary search  
+Binary Tree; O(log N), good in multiple operations. ordered trees tend to be unbalanced.
+bower
 Builder Pattern;a creational design patter used to build an object with a lot of optional parameters. Person person = new Person.Person
 char;
 classloader;primordial, extn libraries, classpath
@@ -15,7 +20,9 @@ CompareTo;a method that needs to be implemented in Comparable
 Connection Pooling;Commons DBCP vs c3PO
 contravariant;<? super T>
 Coupling;measure of how much a class is dependent on another class
-covariant; <? extends T>
+covariant; <? extends T>, type T[] may contain elements of type T or any subtype of T, Arrays
+Database Design;
+Database Normalization Forms;
 data types;be careful, bears shouldn't ingest large fluffy dogs
 data types range default;boolean(false), char,byte(8), short(16), int(32), long(64),float(32 IEE 754),double (64 IEE 754)
 Defensive Copy
@@ -25,18 +32,26 @@ Design Patters;Creational, Behavioral and Structural
 Difference between ArrayList and LinkedList;ArrayList-random access Linked List-walk through each nodes
 Difference between and Stack and a Queue; Stack-FILO Queue - FIFO
 DOM vs SAX
+Dynatrace
 Equals - must override hasCode too
 Encapsulation;information hiding via getters and setters
-Enum;
+Enum;final classes with fixed number of instances,iterate thru values()
 Error;OutOfMemoryError
 Exception
+ExecutorService;submit(lambda), invokeAll, invokeAny(), schedule,scheduleAtFixedRate
 fail-fast vs fail-safe;fail-fas-HashMap, ArrayList, fail-safe-ConcurrentHashMap
+fibonacci recursion; if(number == 1 || number == 2){return 1 }  return fibonacciRecusion(number-1) + fibonacciRecusion(number -2); //tail recursion
+final;variables are written to main memory to ensure uninitialized variables are never seen
 final vs finally; final-variable declaration for immutability.cannot be subclassess finally - guaranteed execution in block in try catch.  finalize - cleanup method before garbase collection 
 float;32 bit IEEE 754 default-0.0f
 Flyweight pattern;structural-decrease object count
 Foreign Key
+Fork/Join;
+Garbage Collection;https://dzone.com/articles/java-memory-architecture-model-garbage-collection
 Generics;provides compile-time safety for methods which accepts subtypes
+gulp
 HashMap-implementation of Map
+Heap Pollution;
 Heap;where objects in Java are created
 Hibernate
 How do you count the elements in a linked list; private int countRec()
@@ -50,46 +65,80 @@ interface;collection of abstract methods
 invariant
 Iterator;public Iterator<String> iterator() { return new LinkedListIterator(); }\n private class LinkedListIterator implements Iterator<String> {
 Is float amt = 10.3 corrrect?;No. float amt = 10.3f;
+Java 5;
+Java 6;
+Java 7;fork/join
+Java 8;
 java collections
+java memory;https://dzone.com/articles/java-memory-architecture-model-garbage-collection
+jdbc drivers;jdbc-odbc bridge, jdbc-native, jdbc-net, pure java
+JNDI;Context ctx = new InitialContext() Object ref = ctx.lookup(java:comp/env/ejb/MyBean)
 JPA;specification for accessing, persisting and managing data between entity and relational database tables
 Lazy Loading;design pattern in java where initialization are deferred until the point at which it is needed.
+JUnit;@Before, @Test, when-then, verify, assert
+LDAP;faster for read-only, http://docs.spring.io/spring-security/site/docs/3.1.x/reference/ldap.html
 LinkedList-how do you count the elements?
+Load Balancer;F5 round robin, least used
+Map; map.forEach((k,v)->System.out.println("Key : " + k + " Value : " + v)) for (Map.Entry<String, String> entry : map.entrySet()) { System.out.println("Key : " + entry.getKey() + " Value : " + entry.getValue())
+Maven;GAV
+memory areas;heap, stack, native register
+memory leak;where some objects are not used by application any more, but GC fails to recognize them as unused
 MVC;Model View Controller
 Method reference;Transaction::getId
+nginx;
+npm
 OOP;Abstraction, Encapsulation, Inheritance, Polymorphism
+OWASP;
 Pass by Value or Pass by Reference;Java is Pass by Value
 PECS;Producer Extends Consumer Super
 PermGen;Permanent Generation-objects which survided Young Gen, Tenured Gen. Where java classes are stored
 Polymorphism;Allows the supertypes and its subtype to be accepted in a method without changing the code
+Producer/Consumer;wait(), notifyAll() Consumer sleep
 Race Condition;shared data is modified by multiple threads
 REST;GET PUT DELETE
+Reflection;Clazz, field, value
 Runtime Exception;NPE, ArithmeticException,IllegalArgumentException, NoSuchMethodException, IndexOutOfBoundsException
 Primary Key - only one in each table
+Securiy;DMZ,Reverse Proxy, NAT IP bases translation
+Security Login;
 Servlet;java class which allows servers to communicate with clients by means of request response model
 Session Tracking;User Login, URL Rewriting, Hidden Forms, Cookies and Sessions
 Session Replication;only for session.setAttributes. copy serialiable session data in every instances
 Set;sorted is TreeSet
 Singleton;lazy instantations and ensure only one instance is created
 SOAP;Simple Object Access Protocol. A data interchange format
+SOAPUI;
 SOLID;Single Responsibility Principle\n Open For Modification close for extension \n Liskov Substitution Principle \n Interface Segregation \n Dependency Inversion Principle
 sleep();blocking 
+SONAR;
 Sorting;
 spring framework;MVC,IOC, AOP
+SSL Certificates;Self-signed certificates, keytool
 Stack;where objects in parameters and inside parameters live
 static variables;class variables
-static initializers;Parent static block, Child static block,Parent initialisation  block,Parent Constructor,Child initialisation block,Child Constructor
+static initializers;Parent static block, Child static block,Parent initialisation  block,Parent Constructor,Child initialisation 
+success;technical, organizational, personal
+block,Child Constructor
 Sticky Session;user is tied to a specific server
 SQL Aggregates;AVG, SUM, MIN, MAXa
 Streams;List<Integer> transactionsIds = transactions.stream().filter(t -> t.getType() == Transaction.GROCERY).sorted(comparing(Transaction::getValue).reversed()).map(Transaction::getId).collect(toList());
+Thread;has its own stack
 Thread Contention;one thread is waiting for a lock/object that is currently being held by another thread
 ThreadLocale;read/write only by the same thread,private ThreadLocal myThreadLocal = new ThreadLocal() , myThreadLocal.set("A thread local value")
+Thread;A thread is an independent path of execution within a program
 Thread State; New, Runnable, Blocked, Waiting, Timed_Waiting, Terminating
 Throwable;super class of all errors and exception. Only subclasses of throwable can be used in throws. throwable(exception,error)
 Time;DateTime, JodaDateTime
+Transaction Isolation Level; READ COMMITED, UNCOMMITED, REPEATABLE, SERIALIZED
+UML Relationships;association, aggregation, composition, generalization, realization and dependency
+Underscore;valid in java 7, 1_000
 Url Rewriting;adding extra information to a URL
 Unit Testing
-Volatile;stored in main memory,expensive,prevents instruction reordering
+Volatile;stored in main memory,expensive,prevents instruction reordering. used for closing the thread
+wait vs sleep;wait object sleep thread
 wait();non-blocking, used with notify and notify all
 Weak Reference
 Why is notify, notifyAll part of an Object;Locks are per Object so only the Object can invoke Notify and NotifyAll
 WSDL-port, service,
+Wrapper classes; allows primitives to be accessed as objects
+XSS Vulnerability;run malicious js code in clients browser,access to cookies,sessions,dOM. How to fix? encoding and whitelist

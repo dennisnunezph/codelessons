@@ -1,4 +1,4 @@
-package lessons.recursion;
+package lessons.algorithm.recursion;
 
 /**
  * Created by dennis on 4/1/16.
