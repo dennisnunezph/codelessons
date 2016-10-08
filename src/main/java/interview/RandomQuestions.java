@@ -25,6 +25,7 @@ public class RandomQuestions {
 
     public void showQuestions() {
         Path filePath = FileSystems.getDefault().getPath("/home/dennis/workspace/lessons/codelessons/src/main/java/interview/lessons.txt");
+        Response response = new Response();
         try {
             Scanner scanner = new Scanner(System.in);
             List<String> questions = null;
@@ -32,6 +33,7 @@ public class RandomQuestions {
             String qandA = "";
             String question = "";
             String answer = "";
+
             String[] qaParts = null;
 
             while(!inputKey.equalsIgnoreCase("q")) {
@@ -57,15 +59,43 @@ public class RandomQuestions {
                     System.out.println("Answer is : " + answer);
                     answer = "";
                     inputKey = scanner.next();
+
+                    if ("y".equalsIgnoreCase(inputKey)) {
+                        response.right++;
+                    } else if ("n".equalsIgnoreCase(inputKey)) {
+                        response.wrong++;
+                    }
+
                 }
 
-
-
             }
+
+            if ("q".equalsIgnoreCase(inputKey)) {
+                System.out.println("Youre percentage is :" + response.getPercentage());
+            }
+
         } catch (IOException e) {
             e.printStackTrace();
         }
 
+    }
+
+    class Response {
+        int right = 0;
+        int wrong = 0;
+
+        int getTotal() {
+            return right + wrong;
+        }
+
+        float getPercentage() {
+            if (right == 0
+                    || wrong == 0) {
+                return 0;
+            }
+
+            return (Float.valueOf(right) /  Float.valueOf(getTotal())) * 100;
+        }
     }
 }
 

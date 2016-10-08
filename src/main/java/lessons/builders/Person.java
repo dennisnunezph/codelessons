@@ -4,14 +4,6 @@ package lessons.builders;
  * Created by dennis on 6/27/16.
  */
 public class Person {
-    public String getMiddleName() {
-        return middleName;
-    }
-
-    public void setMiddleName(String middleName) {
-        this.middleName = middleName;
-    }
-
     private String firstName;
     private String lastName;
     private String middleName;
@@ -23,6 +15,15 @@ public class Person {
         this.lastName = lastName;
         this.middleName =middleName;
     }
+
+    public String getMiddleName() {
+        return middleName;
+    }
+
+    public void setMiddleName(String middleName) {
+        this.middleName = middleName;
+    }
+
 
     public String getFirstName() {
         return firstName;

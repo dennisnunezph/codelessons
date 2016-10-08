@@ -5,47 +5,43 @@ package lessons.deadlock;
  */
 public class DeadLockDemo {
 
-    public static void main(String[] args) {
-        DeadLockDemo dm = new DeadLockDemo();
-        dm.method1();
+    public static Object Lock1 = new Object();
+    public static Object Lock2 = new Object();
+
+    public static void main(String args[]) {
+        ThreadDemo1 T1 = new ThreadDemo1();
+        ThreadDemo2 T2 = new ThreadDemo2();
+        T1.start();
+        T2.start();
     }
 
+    private static class ThreadDemo1 extends Thread {
+        public void run() {
+            synchronized (Lock1) {
+                System.out.println("Thread 1: Holding lock 1...");
 
-    /*
-     * This method request two locks, first String and then Integer
-     */
-    public void method1() {
-        synchronized (String.class) {
-            System.out.println("Aquired lock on String.class object");
+                try { Thread.sleep(10); }
+                catch (InterruptedException e) {}
+                System.out.println("Thread 1: Waiting for lock 2...");
 
-            synchronized (Integer.class) {
-                System.out.println("Aquired lock on Integer.class object");
+                synchronized (Lock2) {
+                    System.out.println("Thread 1: Holding lock 1 & 2...");
+                }
             }
         }
     }
+    private static class ThreadDemo2 extends Thread {
+        public void run() {
+            synchronized (Lock2) {
+                System.out.println("Thread 2: Holding lock 2...");
 
-    public void method1Fixed() {
-        synchronized (Integer.class) {
-            System.out.println("Aquired lock on Integer.class object");
-            synchronized (String.class) {
-                System.out.println("Aquired lock on String.class object");
-            }
-        }
-    }
+                try { Thread.sleep(10); }
+                catch (InterruptedException e) {}
+                System.out.println("Thread 2: Waiting for lock 1...");
 
-
-    /*
-     * This method also requests same two lock but in exactly
-     * Opposite order i.e. first Integer and then String.
-     * This creates potential deadlock, if one thread holds String lock
-     * and other holds Integer lock and they wait for each other, forever.
-     */
-    public void method2() {
-        synchronized (Integer.class) {
-            System.out.println("Aquired lock on Integer.class object");
-
-            synchronized (String.class) {
-                System.out.println("Aquired lock on String.class object");
+                synchronized (Lock1) {
+                    System.out.println("Thread 2: Holding lock 1 & 2...");
+                }
             }
         }
     }

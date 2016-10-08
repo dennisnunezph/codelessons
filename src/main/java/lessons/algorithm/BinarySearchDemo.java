@@ -24,7 +24,7 @@ public class BinarySearchDemo {
 
         if(target==a[middle]) {
             return middle;
-        } else if(target<a[middle]) {
+        } else if(target < a[middle]) {
             return binarySearch(a, start, middle - 1, target);
         } else {
             return binarySearch(a, middle + 1, end, target);

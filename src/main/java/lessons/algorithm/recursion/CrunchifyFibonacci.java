@@ -17,9 +17,11 @@ public class CrunchifyFibonacci {
 
         System.out.println("\n\nFibonacci series upto " + number +" numbers : ");
         //printing Fibonacci series upto number
-        for(int i=1; i<=number; i++){
-            System.out.print(fibonacciRecusion(i) +" ");
-        }
+        //for(int i=1; i<=number; i++){
+        //    System.out.print(fibonacciRecusion(i) +" ");
+        //}
+
+        System.out.print(fibonacciLoop(number) +" ");
     }
 
     // Java program for Fibonacci number using recursion.
