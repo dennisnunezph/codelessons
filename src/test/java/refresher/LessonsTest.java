@@ -1,7 +1,6 @@
 package refresher;
 
 import lessons.builders.Person;
-import org.junit.Test;
 
 /**
  * Created by dennis on 6/29/16.
