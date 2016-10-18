@@ -1,4 +1,4 @@
-package exam;
+package lessons.algorithm;
 
 /**
  * Created by dennis on 10/1/16.

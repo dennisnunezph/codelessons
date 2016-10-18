@@ -1,6 +1,9 @@
 package lessons.io;
 
 import java.io.*;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.util.stream.Stream;
 
 /**
  * Created by dennis on 7/8/16.
@@ -8,6 +11,39 @@ import java.io.*;
 public class SimpleFileDemo {
 
     public static void main(String[] args) {
+       // classicBufferedReader();
+       viaPaths();
+
+    }
+
+    private static void viaPaths()  {
+        Stream<String> lines = null;
+        try {
+            lines = Files.lines(Paths.get("", "sample.txt"));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        lines.forEach(s -> System.out.println(s));
+    }
+
+    private static void classicBufferedReader() {
+        BufferedReader reader;
+        String currentLine = null;
+
+        try {
+            reader = new BufferedReader(
+                    new FileReader("sample.txt"));
+
+            while((currentLine = reader.readLine()) != null) {
+                System.out.println(currentLine);
+            }
+
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
+    }
+
+    private static void openFile1() {
         //String path = SimpleFileDemo.class.getProtectionDomain().getCodeSource().getLocation().getFile();
         //System.out.println("my path is" + path);
         SimpleFileDemo demo = new SimpleFileDemo();
@@ -26,8 +62,6 @@ public class SimpleFileDemo {
          } catch (IOException e) {
             e.printStackTrace();
         }
-
-
     }
 
     public InputStream getFile() {

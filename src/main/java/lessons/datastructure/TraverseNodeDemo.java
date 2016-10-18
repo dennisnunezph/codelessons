@@ -1,4 +1,4 @@
-package exam;
+package lessons.datastructure;
 
 /**
  * Created by dennis on 7/12/16.
